@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/env3/install
+
+Name: flmbn
+Description: Description of flmbn
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<launch>
+
+<include file="$(find arenaros)/launch/arenaros.launch"/>
+
+
+<!-- <include file="$(find rplidar_ros)/launch/freenect.launch"/> -->
+
+<include file="$(find vna)/launch/display.launch"/>
+
+<!--this line is included in mybot_rviz.launch file param name="robot_description" command="$(find xacro)/xacro.py '$(find mybot_description)/urdf/mybot.xacro'"/-->
+
+
+<!--  depth image to laser scan -->
+
+<node name="rplidarNode"          pkg="rplidar_ros"  type="rplidarNode" output="screen">
+  <param name="serial_port"         type="string" value="/dev/ttyUSB0"/>
+  <param name="serial_baudrate"     type="int"    value="115200"/><!--A1/A2 -->
+  <!--param name="serial_baudrate"  type="int"    value="256000"--><!--A3 -->
+  <param name="frame_id"            type="string" value="laser"/>
+  <param name="inverted"            type="bool"   value="false"/>
+  <param name="angle_compensate"    type="bool"   value="true"/>
+</node>  
+
+<!-- publishing odometry from hardware -->
+
+<node name="odom_pub" pkg="odom_pub" type="odom_pub_node"/> 
+
+<!-- open the rosserial from other terminal and select the right serial port and baud rate -->
+
+
+<!-- <include file="$(find mybot_nav)/launch/mybot_teleop.launch"/> -->
+<!-- <node name="odom_pub" pkg="odom_pub" type="odom_pub_node"/> -->
+
+
+
+<!-- gmapping node -->
+<include file="$(find gmapping)/launch/gmapping.launch"/>
+
+
+</launch>
+

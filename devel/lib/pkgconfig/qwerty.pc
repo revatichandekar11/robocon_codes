@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/env3/devel
+
+Name: qwerty
+Description: Description of qwerty
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

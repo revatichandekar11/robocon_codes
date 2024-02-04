@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/env3/devel
+
+Name: finfl_gazebo
+Description: Description of finfl_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

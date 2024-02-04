@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/env3/devel
+
+Name: hjk
+Description: Description of hjk
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

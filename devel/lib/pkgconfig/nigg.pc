@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/env3/devel
+
+Name: nigg
+Description: Description of nigg
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

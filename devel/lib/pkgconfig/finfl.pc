@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/env3/devel
+
+Name: finfl
+Description: Description of finfl
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
